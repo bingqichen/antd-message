@@ -3,7 +3,11 @@
 
 ## 使用
 
-`yarn install && npm run dev`可进入开发模式
+`npm install && npm run dev`可进入开发模式；
+
+如果你使用`yarn`，也可以使用
+
+`yarn install && npm run dev`
 
 ```javascript
 import Message from '~/message';
