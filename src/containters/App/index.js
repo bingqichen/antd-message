@@ -1,9 +1,19 @@
-import React, { Component } from 'react';
+import React, { PropTypes } from 'react';
 
-export default class App extends Component {
-  render() {
-    return (
-      <div></div>
-    );
-  }
-}
+import './style.less';
+
+const App = (props) => {
+  const { children } = props;
+  return (
+    <div className="app-wrap">{children}</div>
+  );
+};
+
+App.propTypes = {
+  children: PropTypes.element
+};
+App.defaultProps = {
+  children: undefined
+};
+
+export default App;

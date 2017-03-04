@@ -1,5 +1,6 @@
 import React, { PropTypes } from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
+import cx from 'classnames';
 
 import Icon from '~/icon';
 
@@ -7,8 +8,12 @@ import './style.less';
 
 const GlobalMessage = (props) => {
   const { type, content } = props;
+  const cls = cx(
+    'message-content',
+    type
+  );
   return (
-    <div className="type">
+    <div className={cls}>
       <Icon type={type} />
       <p>{content}</p>
     </div>
@@ -30,7 +35,7 @@ export default class Message {
   static error(content, timeout) {
     this.message('error', content, timeout);
   }
-  static message(type, content, timeout = 2000) {
+  static message(type, content, timeout = 3000) {
     const container = document.createElement('div');
     container.setAttribute('class', 'component-message-wrap');
     container.setAttribute('style', `animation-duration:${timeout}ms`);

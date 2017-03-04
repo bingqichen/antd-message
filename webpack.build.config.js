@@ -11,36 +11,42 @@ module.exports = {
   output: {
     path: path.join(__dirname, 'dist/'),
     filename: 'js/[name].js',
-    publicPath: './'
+    publicPath: '/'
   },
   module: {
-    loaders: [
+    rules: [
       {
         test: /\.js[x]?$/,
-        loaders: ['babel'],
+        use: 'babel-loader',
         exclude: /node_modules/
-      },
-      {
-        test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader!postcss-loader?sourceMap'
-        })
       },
       {
         test: /\.less$/,
         loader: ExtractTextPlugin.extract({
           fallback: 'style-loader',
-          use: 'css-loader!postcss-loader!less-loader?sourceMap'
+          use: [
+            'css-loader?importLoaders=1',
+            {
+              loader: 'postcss-loader',
+              options: {
+                plugins: [
+                  autoprefixer({
+                    browsers: ['> 1%', 'ie >= 9']
+                  })
+                ]
+              }
+            },
+            'less-loader'
+          ]
         })
       },
       {
         test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
-        loader: 'url?name=fonts/[name].[ext]'
+        use: 'file-loader?name=fonts/[name].[ext]'
       },
       {
         test: /\.(png|jpe?g?)(\?[a-z0-9=&.]+)?$/,
-        loader: 'url?name=img/[name].[ext]'
+        use: 'file-loader?name=images/[name].[ext]'
       }
     ]
   },
@@ -62,15 +68,15 @@ module.exports = {
         drop_console: true
       }
     }),
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'js/vendor.min.js'),
-
+    new webpack.LoaderOptionsPlugin({
+      minimize: true,
+      debug: false
+    }),
+    new webpack.optimize.CommonsChunkPlugin({
+      name: 'vendor' // Specify the common bundle's name.
+    })
   ],
   resolve: {
-    extensions: ['', '.js', '.jsx', '.less']
-  },
-  postcss: [
-    autoprefixer({
-      browsers: ['> 1%', 'ie >= 9']
-    })
-  ]
+    extensions: ['.js', '.jsx', '.less']
+  }
 };
