@@ -1,0 +1,43 @@
+{
+  "plugins": [
+    "react"
+  ],
+  "extends": "airbnb",
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 7,
+    "ecmaFeatures": {
+      "jsx": true,
+      "modules": true,
+      "experimentalObjectRestSpread": true,
+      "arrowFunctions": true,
+      "destructuring": true,
+      "blockBindings": true
+    }
+  },
+  "env": {
+    "es6": true,
+    "browser": true,
+    "node": true
+  },
+  "rules": {
+    "strict": 0,
+    "jsx-a11y/no-static-element-interactions": 0,
+    "import/no-unresolved": [1],
+    "import/extensions": 0,
+    "indent": [2, 2],
+    "comma-dangle": 0,
+    "no-console": 0,
+    "react/jsx-filename-extension": [1, { "extensions": [".js", ".jsx"] }],
+    "max-len": [
+      1,
+      {
+        "code": 120,
+        "ignoreUrls": true,
+        "ignoreTrailingComments": true,
+        "ignoreComments": true,
+        "ignorePattern": "^\\s*(const|let|var)\\s+\\w+\\s+\\=\\s+\\/.*\\/(|i|g|m|ig|im|gm|igm);?$"
+      }
+    ]
+  }
+}
