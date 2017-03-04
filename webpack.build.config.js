@@ -62,7 +62,8 @@ module.exports = {
         drop_console: true
       }
     }),
-    new webpack.optimize.CommonsChunkPlugin('vendor', 'js/vendor.min.js')
+    new webpack.optimize.CommonsChunkPlugin('vendor', 'js/vendor.min.js'),
+
   ],
   resolve: {
     extensions: ['', '.js', '.jsx', '.less']

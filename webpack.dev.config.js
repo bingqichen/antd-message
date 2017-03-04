@@ -1,7 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const ExtractTextPlugin = require('extract-text-webpack-plugin');
-// const OpenBrowserPlugin = require('open-browser-webpack-plugin');
+const WebpackBrowserPlugin = require('webpack-browser-plugin');
 const autoprefixer = require('autoprefixer');
 
 module.exports = {
@@ -19,23 +19,23 @@ module.exports = {
       // bundle the client for hot reloading
       // only- means to only hot reload for successful updates
 
-      path.join(__dirname, './src/app.js')
+      path.join(__dirname, 'src/app')
       // the entry point of our app
     ]
   },
   output: {
     path: path.join(__dirname, 'public/'),
     filename: '[name].dev.js',
-    publicPath: 'http://localhost:8080/'
+    publicPath: '/'
   },
   devServer: {
     hot: true,
     // enable HMR on the server
-
-    // contentBase: path.join(__dirname, 'public/'),
+    inline: true,
+    contentBase: path.join(__dirname, '.'),
     // match the output path
 
-    publicPath: 'http://localhost:8080/'
+    publicPath: '/'
     // match the output `publicPath`
   },
   module: {
@@ -47,17 +47,71 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader?sourceMap'
-        })
+        use: [
+          'style-loader',
+          'css-loader?importLoaders=1',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                autoprefixer({
+                  browsers: ['> 1%', 'ie >= 9']
+                })
+              ]
+            }
+          }
+        ]
+        // loader: ExtractTextPlugin.extract({
+        //   fallback: 'style-loader',
+        //   use: [
+        //     'css-loader?importLoaders=1',
+        //     {
+        //       loader: 'postcss-loader',
+        //       options: {
+        //         plugins: [
+        //           autoprefixer({
+        //             browsers: ['> 1%', 'ie >= 9']
+        //           })
+        //         ]
+        //       }
+        //     }
+        //   ]
+        // })
       },
       {
         test: /\.less$/,
-        loader: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: 'css-loader!less-loader?sourceMap'
-        })
+        use: [
+          'style-loader',
+          'css-loader?importLoaders=1',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                autoprefixer({
+                  browsers: ['> 1%', 'ie >= 9']
+                })
+              ]
+            }
+          },
+          'less-loader'
+        ]
+        // loader: ExtractTextPlugin.extract({
+        //   fallback: 'style-loader',
+        //   use: [
+        //     'css-loader?importLoaders=1',
+        //     {
+        //       loader: 'postcss-loader',
+        //       options: {
+        //         plugins: [
+        //           autoprefixer({
+        //             browsers: ['> 1%', 'ie >= 9']
+        //           })
+        //         ]
+        //       }
+        //     },
+        //     'less-loader'
+        //   ]
+        // })
       },
       {
         test: /\.(ttf|eot|svg|woff(2)?)(\?[a-z0-9=&.]+)?$/,
@@ -74,10 +128,14 @@ module.exports = {
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(process.env.NODE_ENV)
     }),
-    new ExtractTextPlugin({
-      filename: '[name].dev.css',
-      disable: false,
-      allChunks: true
+    // new ExtractTextPlugin({
+    //   filename: '[name].dev.css',
+    //   disable: false,
+    //   allChunks: true
+    // }),
+    new WebpackBrowserPlugin({
+      port: 8080,
+      url: 'http://localhost'
     }),
 
   ],
