@@ -31,12 +31,15 @@ module.exports = {
   devServer: {
     hot: true,
     // enable HMR on the server
-    inline: true,
+
     contentBase: path.join(__dirname, '.'),
     // match the output path
 
-    publicPath: '/'
+    publicPath: '/',
     // match the output `publicPath`
+
+    inline: true,
+    compress: true
   },
   module: {
     rules: [
