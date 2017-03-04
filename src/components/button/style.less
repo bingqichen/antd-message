@@ -1,0 +1,115 @@
+@import "../style/theme.less";
+
+.component-button-wrap {
+  text-align: center;
+  border-radius: @radius;
+  border-width: 1px;
+  border-style: solid;
+  transition: all .3s;
+  outline: none;
+
+  &.primary {
+    background-color: @primary-color;
+    color: #fff;
+    border-color: @primary-color;
+  }
+  &.primary:hover {
+    background-color: tint(@primary-color, 20%);
+    border-color: tint(@primary-color, 20%);
+  }
+  &.primary:active {
+    background-color: shade(@primary-color, 5%);
+    border-color: shade(@primary-color, 5%);
+  }
+  &.primary-o {
+    background-color: #fff;
+    color: @primary-color;
+    border-color: @primary-color;
+  }
+  &.primary-o:hover {
+    color: tint(@primary-color, 20%);
+    border-color: tint(@primary-color, 20%);
+  }
+  &.primary-o:active {
+    color: shade(@primary-color, 5%);
+    border-color: shade(@primary-color, 5%);
+  }
+
+  &.gary {
+    background-color: @gary-color;
+    color: #fff;
+    border-color: @gary-color;
+  }
+  &.gary:hover {
+    background-color: tint(@gary-color, 20%);
+    border-color: tint(@gary-color, 20%);
+  }
+  &.gary:active {
+    background-color: shade(@gary-color, 5%);
+    border-color: shade(@gary-color, 5%);
+  }
+  &.gary-o {
+    background-color: #fff;
+    color: @gary-color;
+    border-color: @gary-color;
+  }
+  &.gary-o:hover {
+    color: tint(@gary-color, 20%);
+    border-color: tint(@gary-color, 20%);
+  }
+  &.gary-o:active {
+    color: shade(@gary-color, 5%);
+    border-color: shade(@gary-color, 5%);
+  }
+
+  &.primary[disabled] {
+    background-color: tint(@primary-color, 65%);
+    border-color: tint(@primary-color, 65%);
+  }
+  &.primary-o[disabled] {
+    color: tint(@primary-color, 65%);
+    border-color: tint(@primary-color, 65%);
+  }
+  &.gary[disabled] {
+    background-color: tint(@gary-color, 65%);
+    border-color: tint(@gary-color, 65%);
+  }
+  &.gary-o[disabled] {
+    color: tint(@gary-color, 65%);
+    border-color: tint(@gary-color, 65%);
+  }
+
+  &.small {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 4px 8px;
+  }
+  &.middle {
+    font-size: 12px;
+    line-height: 12px;
+    padding: 5px 10px;
+  }
+  &.big {
+    font-size: 14px;
+    line-height: 14px;
+    padding: 6px 14px;
+  }
+}
+
+.component-button-group-wrap {
+  display: inline-block;
+
+  > * {
+    border-radius: 0;
+  }
+
+  > *:first-child {
+    border-top-left-radius: @radius;
+    border-bottom-left-radius: @radius;
+  }
+
+  > *:last-child {
+    border-top-right-radius: @radius;
+    border-bottom-right-radius: @radius;
+  }
+}

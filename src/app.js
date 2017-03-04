@@ -1,12 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 
+import Message from '~/message';
+import '~/style/global.less';
+
 import App from './containters/App';
 import Demo from './containters/Demo';
-
-import Message from '~/message';
-
-import './style.less';
 
 window.message = Message;
 
