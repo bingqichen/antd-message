@@ -12,6 +12,7 @@
     "url": "git+https://github.com/bingqichen/antd-message.git"
   },
   "keywords": [
+    "react",
     "message",
     "消息提示",
     "antd",
