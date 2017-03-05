@@ -2,7 +2,7 @@
   "name": "antd-message",
   "version": "1.0.0",
   "description": "高仿antd消息提示",
-  "main": "webpack.dev.config.js",
+  "main": "src/message/index.js",
   "scripts": {
     "dev": "NODE_ENV='development' webpack-dev-server --config webpack.dev.config.js",
     "build": "NODE_ENV='production' webpack --progress --display-error-details --colors --profile --config webpack.build.config.js"

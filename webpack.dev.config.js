@@ -19,7 +19,7 @@ module.exports = {
       // bundle the client for hot reloading
       // only- means to only hot reload for successful updates
 
-      path.join(__dirname, 'src/app')
+      path.join(__dirname, 'index')
       // the entry point of our app
     ]
   },
