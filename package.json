@@ -1,6 +1,6 @@
 {
   "name": "antd-message",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "高仿antd消息提示",
   "main": "src/message/index.js",
   "scripts": {
