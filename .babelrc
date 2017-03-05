@@ -11,15 +11,15 @@
     ],
     "plugins": [
       "react-hot-loader/babel",
-      "transform-runtime",
-      [
-          "babel-plugin-root-import",
-        [
-          {
-            "rootPathPrefix": "~",
-            "rootPathSuffix": "src"
-          }
-        ]
-      ]
+      "transform-runtime"
+      // [
+      //     "babel-plugin-root-import",
+      //   [
+      //     {
+      //       "rootPathPrefix": "~",
+      //       "rootPathSuffix": "src"
+      //     }
+      //   ]
+      // ]
     ]
 }
