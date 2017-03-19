@@ -25,7 +25,6 @@
   },
   "homepage": "https://github.com/bingqichen/antd-message#readme",
   "dependencies": {
-    "axios": "^0.15.3",
     "classnames": "^2.2.5",
     "react": "^15.4.2",
     "react-dom": "^15.4.2"
