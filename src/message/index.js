@@ -2,7 +2,7 @@ import React, { PropTypes } from 'react';
 import { render, unmountComponentAtNode } from 'react-dom';
 import cx from 'classnames';
 
-import Icon from '../icon';
+import Icon from '~/icon';
 
 import './style.less';
 

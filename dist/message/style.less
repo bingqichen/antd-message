@@ -1,0 +1,76 @@
+.component-message-wrap {
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  width: auto;
+  max-width: 75%;
+  display: inline-block;
+  position: fixed;
+  z-index: 20;
+  left: 50%;
+  top: -20px;
+  border-radius: 4px;
+  padding: 8px 16px;
+  background-color: #fff;
+  color: #000;
+  pointer-events: all;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, .2);
+
+  transform: translateX(-50%);
+  animation-name: message;
+
+  @keyframes message {
+    0% {
+      top: -20px;
+      opacity: 1;
+    }
+    10% {
+      top: 20px;
+      opacity: 1;
+    }
+    80% {
+      top: 20px;
+      opacity: 1;
+    }
+    100% {
+      top: -20px;
+      opacity: 0;
+    }
+  }
+
+  .message-content {
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+    i {
+      font-size: 14px;
+      display: block;
+      line-height: 1.1;
+      margin-right: 8px;
+    }
+    p {
+      flex: 1;
+      word-break: break-all;
+      line-height: 1.1;
+    }
+  }
+
+  .success {
+    i {
+      color: #87d068;
+    }
+  }
+  .warn {
+    i {
+      color: #fa0;
+    }
+  }
+  .error {
+    i {
+      color: #f50;
+    }
+  }
+}
