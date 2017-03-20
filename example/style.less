@@ -1,0 +1,66 @@
+.button {
+  padding: 4px 6px;
+  text-align: center;
+  color: #fff;
+  border-radius: 4px;
+  border-width: 1px;
+  border-style: solid;
+
+  &.primary {
+    background-color: #87d068;
+    border-color: #87d068;
+  }
+  &.primary:hover {
+    background-color: tint(#87d068, 20%);
+    border-color: tint(#87d068, 20%);
+  }
+  &.primary:active {
+    background-color: shade(#87d068, 5%);
+    border-color: shade(#87d068, 5%);
+  }
+  &.primary[disabled] {
+    background-color: tint(#87d068, 65%);
+    border-color: tint(#87d068, 65%);
+  }
+
+  &.warn {
+    background-color: #fa0;
+    border-color: #fa0;
+  }
+  &.warn:hover {
+    background-color: tint(#fa0, 20%);
+    border-color: tint(#fa0, 20%);
+  }
+  &.warn:active {
+    background-color: shade(#fa0, 5%);
+    border-color: shade(#fa0, 5%);
+  }
+  &.warn[disabled] {
+    background-color: tint(#fa0, 65%);
+    border-color: tint(#fa0, 65%);
+  }
+
+  &.error {
+    background-color: #f50;
+    border-color: #f50;
+  }
+  &.error:hover {
+    background-color: tint(#f50, 20%);
+    border-color: tint(#f50, 20%);
+  }
+  &.error:active {
+    background-color: shade(#f50, 5%);
+    border-color: shade(#f50, 5%);
+  }
+  &.error[disabled] {
+    background-color: tint(#f50, 65%);
+    border-color: tint(#f50, 65%);
+  }
+}
+
+.app-wrap {
+  > div {
+    display: inline-block;
+    margin-right: 20px;
+  }
+}

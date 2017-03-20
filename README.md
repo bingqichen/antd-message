@@ -5,7 +5,7 @@
 
 使用`npm`安装：`npm install antd-message --save`
 
-如果你使用`yarn`也可以使用：`yarn add antd-message`
+如果你使用`yarn`也可以这样安装：`yarn add antd-message`
 
 在你的文件中引入即可使用；
 
@@ -23,3 +23,6 @@ message.success(content, timeout)
 | --------- | ------------- | ---- | ------ |
 | `content` | 提示内容          | -    | -      |
 | `timeout` | 提示展示时间(不建议修改) | -    | 3000ms |
+
+### 效果图
+![效果图](https://ooo.0o0.ooo/2017/03/20/58cfb9c34845f.png)

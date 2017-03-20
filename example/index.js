@@ -1,35 +1,36 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
+import cx from 'classnames';
 import Message from '../dist/message/index.js';
+
+import './style.less';
 
 window.message = Message;
 
 const Button = (props) => {
-  const { children, onClick } = props;
+  const { type = 'primary', children, onClick = () => { } } = props;
+
+  const cls = cx('button', type);
   return (
-    <button onClick={onClick}>{children}</button>
+    <button className={cls} onClick={onClick}>{children}</button>
   );
 };
 
 class App extends Component {
-  constructor(props) {
-    super(props);
-    this.handleClick = this.handleClick.bind(this);
-  }
-  handleClick(type, content) {
+  static handleClick(type, content) {
     window.message[type](content);
   }
   render() {
     return (
       <div className="app-wrap">
         <div>
-          <Button onClick={() => this.handleClick('success', '成功')}>成功提示</Button>
+          <Button type="primary" onClick={() => App.handleClick('success', '成功')}>成功提示</Button>
         </div>
         <div>
-          <Button onClick={() => this.handleClick('warn', '警告')}>警告提示</Button>
+          <Button type="warn" onClick={() => App.handleClick('warn', '警告')}>警告提示</Button>
         </div>
         <div>
-          <Button onClick={() => this.handleClick('error', '错误')}>错误提示</Button>
+          <Button type="error" onClick={() => App.handleClick('error', '错误')}>错误提示</Button>
         </div>
       </div>
     );
