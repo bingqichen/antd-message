@@ -1,28 +1,32 @@
 # antd-message
+Global message like ant-design
+
 高仿 ant-design 全局消息提示
 
-### 使用
+## Installing
+Using npm:
+```javascript
+$ npm install antd-message --save
+```
+Using yarn:
+```javascript
+$ yarn add antd-message
+```
 
-使用`npm`安装：`npm install antd-message --save`
-
-如果你使用`yarn`也可以这样安装：`yarn add antd-message`
-
-在你的文件中引入即可使用；
-
+## Example
 ```javascript
 import Message from 'antd-message';
 window.message = Message;
 message.success(content, timeout)
 ```
+![Renderings](https://ooo.0o0.ooo/2017/03/20/58cfb9c34845f.png)
 
-### 可选项
+## Options
+Three types: `message.success`、`message.warn`、`message.error`
+| params    | summary                     | type     | default   |
+| --------- | --------------------------- | -------- | --------- |
+| `content` | message content             | `String` | -         |
+| `timeout` | timeout the message unmount | `Number` | 3000 (ms) |
 
-可选三种提示类型，`message.success`、`message.warn`、`message.error`分别代表成功、警告、错误提示；
-
-| 参数        | 说明            | 可选值  | 默认值    |
-| --------- | ------------- | ---- | ------ |
-| `content` | 提示内容          | -    | -      |
-| `timeout` | 提示展示时间(不建议修改) | -    | 3000ms |
-
-### 效果图
-![效果图](https://ooo.0o0.ooo/2017/03/20/58cfb9c34845f.png)
+## License
+MIT

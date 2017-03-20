@@ -49,6 +49,39 @@ module.exports = {
         exclude: /node_modules/
       },
       {
+        test: /\.css$/,
+        use: [
+          'style-loader',
+          'css-loader?importLoaders=1',
+          {
+            loader: 'postcss-loader',
+            options: {
+              plugins: [
+                autoprefixer({
+                  browsers: ['> 1%', 'ie >= 9']
+                })
+              ]
+            }
+          }
+        ]
+        // loader: ExtractTextPlugin.extract({
+        //   fallback: 'style-loader',
+        //   use: [
+        //     'css-loader?importLoaders=1',
+        //     {
+        //       loader: 'postcss-loader',
+        //       options: {
+        //         plugins: [
+        //           autoprefixer({
+        //             browsers: ['> 1%', 'ie >= 9']
+        //           })
+        //         ]
+        //       }
+        //     }
+        //   ]
+        // })
+      },
+      {
         test: /\.less$/,
         use: [
           'style-loader',
