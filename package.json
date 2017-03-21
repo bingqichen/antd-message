@@ -1,7 +1,7 @@
 {
   "name": "antd-message",
   "version": "1.0.8",
-  "description": "高仿antd消息提示",
+  "description": "Global message like ant-design",
   "main": "dist/message/index.js",
   "scripts": {
     "demo": "NODE_ENV='development' webpack-dev-server --config example/webpack.config.js",
