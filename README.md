@@ -23,6 +23,7 @@ message.success(content, timeout)
 
 ## Options
 Three types: `message.success`、`message.warn`、`message.error`
+
 params    | summary                     | type     | default
 --------- | --------------------------- | -------- | ---------
 `content` | message content             | `String` | -
