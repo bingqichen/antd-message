@@ -17,7 +17,7 @@ $ yarn add antd-message
 ```javascript
 import Message from 'antd-message';
 window.message = Message;
-message.success(content, timeout)
+message.success(content, timeout);
 ```
 ![Renderings](https://ooo.0o0.ooo/2017/03/20/58cfb9c34845f.png)
 
