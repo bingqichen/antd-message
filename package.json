@@ -1,6 +1,6 @@
 {
   "name": "antd-message",
-  "version": "1.0.9",
+  "version": "1.0.10",
   "description": "Global message like ant-design",
   "main": "dist/message/index.js",
   "scripts": {
