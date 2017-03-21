@@ -38,12 +38,13 @@ export default class Message {
   static message(type, content, timeout = 3000) {
     const container = document.createElement('div');
     container.setAttribute('class', 'component-message-wrap');
-    container.setAttribute('style', `animation-duration:${timeout}ms`);
+    container.setAttribute('style', `-webkit-animation-duration: ${timeout}ms`);
+    container.setAttribute('style', `animation-duration: ${timeout}ms`);
     document.body.appendChild(container);
     render(<GlobalMessage type={type} content={content} />, container);
     setTimeout(() => {
       unmountComponentAtNode(container);
-      container.remove();
+      container.parentNode.removeChild(container);
     }, timeout);
   }
 }
