@@ -23,10 +23,10 @@ message.success(content, timeout)
 
 ## Options
 Three types: `message.success`、`message.warn`、`message.error`
-| params    | summary                     | type     | default   |
-| --------- | --------------------------- | -------- | --------- |
-| `content` | message content             | `String` | -         |
-| `timeout` | timeout the message unmount | `Number` | 3000 (ms) |
+params    | summary                     | type     | default
+--------- | --------------------------- | -------- | ---------
+`content` | message content             | `String` | -
+`timeout` | timeout the message unmount | `Number` | 3000 (ms)
 
 ## License
 MIT
