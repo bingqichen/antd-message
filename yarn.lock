@@ -2854,20 +2854,6 @@ gulp-clean-css@^3.0.4:
     through2 "^2.0.3"
     vinyl-sourcemaps-apply "^0.2.1"
 
-"gulp-compiler-tool@http://npm.wxb.com/gulp-compiler-tool/-/gulp-compiler-tool-0.0.7.tgz":
-  version "0.0.7"
-  resolved "http://npm.wxb.com/gulp-compiler-tool/-/gulp-compiler-tool-0.0.7.tgz#58437c7f188204a5bd2fd64f10cd4b52f5a1cc83"
-  dependencies:
-    autoprefixer "^6.7.7"
-    gulp "^3.9.1"
-    gulp-babel "^6.1.2"
-    gulp-clean-css "^3.0.4"
-    gulp-less "^3.3.0"
-    gulp-postcss "^6.4.0"
-    gulp-replace "^0.5.4"
-    gulp-uglify "^2.1.2"
-    shelljs "^0.7.7"
-
 gulp-less@^3.3.0:
   version "3.3.0"
   resolved "http://registry.npm.taobao.org/gulp-less/download/gulp-less-3.3.0.tgz#d085565da3c810307fde7c7874e86520dc503234"
@@ -2886,15 +2872,6 @@ gulp-postcss@^6.3.0:
     gulp-util "^3.0.8"
     postcss "^5.2.10"
     postcss-load-config "^1.1.0"
-    vinyl-sourcemaps-apply "^0.2.1"
-
-gulp-postcss@^6.4.0:
-  version "6.4.0"
-  resolved "http://registry.npm.taobao.org/gulp-postcss/download/gulp-postcss-6.4.0.tgz#78a32e3c87aa6cdcec5ae1c905e196d478e8c5d5"
-  dependencies:
-    gulp-util "^3.0.8"
-    postcss "^5.2.12"
-    postcss-load-config "^1.2.0"
     vinyl-sourcemaps-apply "^0.2.1"
 
 gulp-replace@^0.5.4:
@@ -2935,19 +2912,6 @@ gulp-uglify@^2.1.1:
     lodash "^4.13.1"
     make-error-cause "^1.1.1"
     prettier "^0.22.0"
-    through2 "^2.0.0"
-    uglify-js "~2.8.10"
-    uglify-save-license "^0.4.1"
-    vinyl-sourcemaps-apply "^0.2.0"
-
-gulp-uglify@^2.1.2:
-  version "2.1.2"
-  resolved "http://registry.npm.taobao.org/gulp-uglify/download/gulp-uglify-2.1.2.tgz#6db85b1d0ee63d18058592b658649d65c2ec4541"
-  dependencies:
-    gulplog "^1.0.0"
-    has-gulplog "^0.1.0"
-    lodash "^4.13.1"
-    make-error-cause "^1.1.1"
     through2 "^2.0.0"
     uglify-js "~2.8.10"
     uglify-save-license "^0.4.1"
@@ -4817,7 +4781,7 @@ postcss-zindex@^2.0.1:
     postcss "^5.0.4"
     uniqs "^2.0.0"
 
-postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.10, postcss@^5.2.12, postcss@^5.2.15, postcss@^5.2.16:
+postcss@^5.0.10, postcss@^5.0.11, postcss@^5.0.12, postcss@^5.0.13, postcss@^5.0.14, postcss@^5.0.16, postcss@^5.0.2, postcss@^5.0.4, postcss@^5.0.5, postcss@^5.0.6, postcss@^5.0.8, postcss@^5.2.10, postcss@^5.2.15, postcss@^5.2.16:
   version "5.2.16"
   resolved "http://registry.npm.taobao.org/postcss/download/postcss-5.2.16.tgz#732b3100000f9ff8379a48a53839ed097376ad57"
   dependencies:
@@ -5469,14 +5433,6 @@ shallow-clone@^0.1.2:
 shelljs@^0.7.5:
   version "0.7.6"
   resolved "http://registry.npm.taobao.org/shelljs/download/shelljs-0.7.6.tgz#379cccfb56b91c8601e4793356eb5382924de9ad"
-  dependencies:
-    glob "^7.0.0"
-    interpret "^1.0.0"
-    rechoir "^0.6.2"
-
-shelljs@^0.7.7:
-  version "0.7.7"
-  resolved "http://registry.npm.taobao.org/shelljs/download/shelljs-0.7.7.tgz#b2f5c77ef97148f4b4f6e22682e10bba8667cff1"
   dependencies:
     glob "^7.0.0"
     interpret "^1.0.0"
