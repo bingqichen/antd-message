@@ -37,7 +37,7 @@ gulp.task('js', () => (
       ]
     }))
     .pipe(uglify())
-    .pipe(replace(/\.less/g, '.css'))
+    .pipe(replace(/(.*?require.+?\.)less|sass|scss|stylus(.*?)/gm, '$1css$2'))
     .pipe(sourcemaps.write())
     .pipe(gulp.dest('dist'))
 ));
