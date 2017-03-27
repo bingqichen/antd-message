@@ -3,7 +3,7 @@ Global message like ant-design
 
 高仿 ant-design 全局消息提示
 
-## Installing
+## Installation
 Using npm:
 ```javascript
 $ npm install antd-message --save

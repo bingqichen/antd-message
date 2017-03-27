@@ -5,7 +5,7 @@
   "main": "dist/message/index.js",
   "scripts": {
     "demo": "NODE_ENV='development' webpack-dev-server --config example/webpack.config.js",
-    "build": "gulp"
+    "build": "gulp-compiler"
   },
   "repository": {
     "type": "git",
@@ -50,6 +50,7 @@
     "gulp": "^3.9.1",
     "gulp-babel": "^6.1.2",
     "gulp-clean-css": "^3.0.4",
+    "gulp-compiler-tool": "0.1.2",
     "gulp-less": "^3.3.0",
     "gulp-postcss": "^6.3.0",
     "gulp-replace": "^0.5.4",
