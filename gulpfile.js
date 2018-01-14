@@ -38,7 +38,9 @@ gulp.task('js', () => (
     }))
     .pipe(uglify())
     .pipe(replace(/(.*?require.+?\.)less|sass|scss|stylus(.*?)/gm, '$1css$2'))
-    .pipe(sourcemaps.write())
+    .pipe(sourcemaps.write('', {
+      mapFile: mapFilePath => mapFilePath.replace('.js.map', '.map')
+    }))
     .pipe(gulp.dest('dist'))
 ));
 
