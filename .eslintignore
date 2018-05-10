@@ -1,0 +1,20 @@
+# OS X
+.DS_Store*
+Icon?
+._*
+
+# npm
+node_modules
+node_modules/
+*.log
+*.gz
+
+# webstorm
+.idea/
+.idea
+
+# yarn
+yarn.lock
+
+# test
+__test__

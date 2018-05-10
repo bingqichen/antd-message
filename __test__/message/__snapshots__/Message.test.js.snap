@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Message Component should be render 1`] = `
+<div
+  class="component-message-wrap"
+  style="animation-duration: 3000ms"
+>
+  <div
+    class="message-content success"
+  >
+    <i
+      class="component-icon-wrap icon-success"
+    />
+    <p>
+      成功
+    </p>
+  </div>
+</div>
+`;
