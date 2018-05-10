@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { render } from 'react-dom';
 import cx from 'classnames';
-import Message from '../dist/message/index.js';
+import Message from '../src/message/index.js';
 
 import './style.less';
 
